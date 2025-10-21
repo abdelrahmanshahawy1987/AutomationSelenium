@@ -38,11 +38,14 @@ public class BaseTest {
 //            System.out.println(i);
 //        }else System.out.println("locator is incorrect");
 
-        driver.findElement(By.tagName("a") ); // return a list of element with tag name "a"
-        List<WebElement> links = driver.findElements(By.tagName("a"));
-        System.out.println("Number of Links are " + links.size());
+//        driver.findElement(By.tagName("a") ); // return a list of element with tag name "a"
+//        List<WebElement> links = driver.findElements(By.tagName("a"));
+//        System.out.println("Number of Links are " + links.size());
       //        driver.close();//close browser without terminate session
 //         driver.quit();//close browser and terminate session
+
+        driver.findElement(input).click();
+        driver.findElement(By.cssSelector("#content>div>div>div>input[type=number]")).sendKeys("1");
 
     }
     public static  WebElement getInput(int i)
